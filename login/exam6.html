@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<title>Document</title>
+</head>
+
+<body>
+
+
+
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" id="login-system" data-toggle="modal" data-target="#myModal">
+  SYSTEM LOGIN 
+</button>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog modal-dialog-centered" style="font-family:Arial, FontAwesome; width: 390px;">
+            <div class="modal-content">
+
+                <div class="header-modal">
+                    <!-- Modal Header -->
+                    <div class="modal-header-a" style="margin-bottom: 30px; display: block;">
+                        <div class="button-close" style="justify-content: right; padding-bottom: 20px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="content">
+                            <h4 style="font-size: 30px;">Member Login</h4>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="username" class="form-control" placeholder="&#xf007;  Username" id="user">
+
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="&#xf023;  Password" id="pass">
+                        <p style="color: red;" id="need-input"></p>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="btn-login" style="background-color: #00ce81; font-size: 18px; " onclick="clickLogin()">Login</button>
+
+
+                </div>
+
+
+                <!-- Modal footer -->
+                <div class="modal-footer" style=" text-align: center;
+                justify-content: center; margin-top: 34px; background-color: #ecf0f1;">
+                    <h6 style="color: #b1aeaf;" onclick="clickForgot()" id="passChange">Forgot Password?</h6>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ******************************************** -->
+
+    <!-- The Modal 2 -->
+    <div class="modal" id="myModal2" style="display: none;">
+        <div class="modal-dialog modal-dialog-centered" style="font-family:Arial, FontAwesome; width: 390px;">
+            <div class="modal-content">
+
+                <div class="header-modal">
+                    <!-- Modal Header -->
+                    <div class="modal-header-a" style="margin-bottom: 30px; display: block;">
+                        <div class="button-close" style="justify-content: right; padding-bottom: 20px;">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+
+                        <div class="content">
+                            <h4 style="font-size: 30px;">Member Login</h4>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="form-group">
+                        <input type="username" class="form-control" placeholder="&#xf007;  OldPassWord" id="oldpass">
+
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="&#xf023;  NewPassWord" id="newpass">
+                        <p style="color: red;" id="need-input2"></p>
+
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="btn-save" onclick="clickSave()" style="background-color: #00ce81; font-size: 18px; ">Save</button>
+
+
+                </div>
+
+
+                <!-- Modal footer -->
+                <div class="modal-footer" style=" text-align: center;
+                justify-content: center; margin-top: 34px; background-color: #ecf0f1;">
+                    <h6 style="color: #b1aeaf;" id="backLogin">Login</h6>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var a = 'admin';
+        var b = 'admin';
+        var needInput = document.getElementById('need-input');
+        var loginSystem = document.getElementById('login-system');
+        var btnLogin = document.getElementById('btn-login');
+        var success = document.getElementById('success');
+        var passChange = document.getElementById('passChange');
+        var modal = document.getElementById('myModal');
+        var modal2 = document.getElementById('myModal2');
+        var btnSave = document.getElementById('btn-save');
+        var needInput2 = document.getElementById('need-input2');
+        var loginBack = document.getElementById('backLogin');
+
+
+        // function case occurred login
+        function clickLogin() {
+
+            // set value
+            var userName = document.getElementById("user").value;
+            var passWord = document.getElementById("pass").value;
+
+            if (userName == '' && passWord == '') {
+
+                needInput.innerText = 'Fill this box!';
+
+            } else if (userName != a || passWord != b) {
+                needInput.innerText = 'Wrong password or username!'
+
+            } else if (userName == a && passWord == b) {
+                // modal.setAttribute('style', 'display:none');
+                needInput.style.color = 'green';
+                needInput.innerText = ' Login success';
+                loginSystem.innerText = 'LOGIN SUCCESS';
+            }
+        }
+
+        //  hide modal login and show modal  change pass
+        function clickForgot() {
+            modal.setAttribute('style', 'display: none');
+            modal2.setAttribute('style', 'display:block');
+            needInput2.innerText = '';
+        }
+
+
+        //  function case occurred change pass
+
+        function clickSave() {
+
+            var oldPass = document.getElementById('oldpass');
+            var newPass = document.getElementById('newpass');
+
+            if (oldPass.value === '' && newPass.value === '') {
+                needInput2.innerText = 'Fill this box!';
+            } else if (oldPass.value != b) {
+                needInput2.innerText = 'Password was wrong!';
+            } else if (oldPass.value == b && newPass == b) {
+                needInput.innerText = 'New password must different!'
+            } else if (oldPass.value == b && newPass != b) {
+                needInput2.style.color = 'green';
+                needInput2.innerText = 'Password changed!';
+                b = newPass.value;
+                modal2.tongle();
+            }
+        }
+
+        //  hide mode change pass and show modal login
+        loginBack.onclick = function() {
+            needInput2.innerText = '';
+            modal2.setAttribute('style', 'display: none');
+            modal.setAttribute('style', 'display:block');
+        }
+    </script>
+</body>
+
+</html>

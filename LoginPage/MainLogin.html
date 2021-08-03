@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/LoginPage/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<title>Login</title>
+</head>
+
+<body>
+
+    <div class="container-fluid w-75 body-form">
+        <div class="row align-items-center">
+            <!-- img left side -->
+            <img src="/media/foodBg4.jpeg" width="20%" height="20%" class="img-left col-md-6 d-md-block d-none">
+            <!-- form login register -->
+            <div class="form-right bg-light col-md-6 col-12 ">
+                <h1 class="text-danger mt-2 text-center">Food delivery</h1>
+                <div class="login form-login">
+                    <p>Username</p>
+                    <input type="username" class="form-control " placeholder="&#xf007;  Username" id="user">
+                    <p class="mt-2">Password</p>
+                    <input type="password" class="form-control" placeholder="&#xf023;  Password" id="pass">
+                    <p style="color: red;" id="need-input"></p>
+                    <button type="submit" class="btn btn-primary btn-block" id="btn-login" style="background-color: #00ce81; font-size: 18px; ">Login</button>
+
+                    <div class="check-pass  d-md-flex d-inline justify-content-between">
+                        <div class="check-box">
+                            <input type="checkbox" name="" id=""> Remember me?
+                        </div>
+                        <p>Forgot your password?</p>
+                    </div>
+                    <div class="register-click d-md-flex d-inline">
+                        Don't have an account?
+                        <p class="text-info ml-1"> Sign Up</p>
+                    </div>
+                </div>
+
+                <div class="register form-login" style="display: none;">
+                    <h4 style="font-size: 30px;">Register</h4>
+
+                    <input type="username" class="form-control" placeholder="&#xf007;  Username" id="user">
+                    <input type="password" class="form-control" placeholder="&#xf023;  Password" id="pass">
+                    <p style="color: red;" id="need-input"></p>
+                    <button type="submit" class="btn btn-primary btn-block" id="btn-login" style="background-color: #00ce81; font-size: 18px; ">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
