@@ -15,46 +15,66 @@
 <title>Login</title>
 </head>
 
-<body>
 
-    <div class="container-fluid w-75 body-form">
+<body>
+    <div class="container-fluid body-form">
         <div class="row align-items-center">
             <!-- img left side -->
-            <img src="/media/foodBg4.jpeg" width="20%" height="20%" class="img-left col-md-6 d-md-block d-none">
+            <img src="/media/bgLogin2.jpg" class="img-left col-lg-8 d-lg-block d-none ml-3">
+
             <!-- form login register -->
-            <div class="form-right bg-light col-md-6 col-12 ">
-                <h1 class="text-danger mt-2 text-center">Food delivery</h1>
-                <div class="login form-login">
+            <div class="form-right  col-lg-4 col-12 ">
+                <!-- Login Form -->
+                <div class="login form-login mb-3 bg-light p-5" id="login-modal">
+                    <h1 class="text-danger mt-2 text-center">Food delivery</h1>
                     <p>Username</p>
                     <input type="username" class="form-control " placeholder="&#xf007;  Username" id="user">
                     <p class="mt-2">Password</p>
                     <input type="password" class="form-control" placeholder="&#xf023;  Password" id="pass">
                     <p style="color: red;" id="need-input"></p>
-                    <button type="submit" class="btn btn-primary btn-block" id="btn-login" style="background-color: #00ce81; font-size: 18px; ">Login</button>
 
-                    <div class="check-pass  d-md-flex d-inline justify-content-between">
-                        <div class="check-box">
-                            <input type="checkbox" name="" id=""> Remember me?
+
+                    <div class="check-pass  d-md-flex d-inline justify-content-between mt-2">
+                        <div class="check-box ">
+                            <input type="checkbox" name="" id="" class="cursor"> Remember me?
                         </div>
-                        <p>Forgot your password?</p>
+                        <p class="forgot-pass cursor">Forgot your password?</p>
                     </div>
-                    <div class="register-click d-md-flex d-inline">
+                    <div class="login-button container-fluid">
+                        <div class="row d-flex justify-content-between">
+                            <button class="btn btn-secondary  col-6" id="btn-login-google" style=" font-size: 25px; "> <i class="fa fa-google" aria-hidden="true"></i> Login with Google</button>
+                            <div class="col-1"></div>
+                            <button class="btn btn-primary  col-5" id="btn-login" style=" font-size: 25px; ">Login</button>
+                        </div>
+
+                    </div>
+                    <div class="register-click d-md-flex d-inline mt-3">
                         Don't have an account?
-                        <p class="text-info ml-1"> Sign Up</p>
+                        <p class="text-info ml-1 cursor" onclick="switchModal()"> Sign Up</p>
                     </div>
                 </div>
 
-                <div class="register form-login" style="display: none;">
-                    <h4 style="font-size: 30px;">Register</h4>
-
-                    <input type="username" class="form-control" placeholder="&#xf007;  Username" id="user">
-                    <input type="password" class="form-control" placeholder="&#xf023;  Password" id="pass">
+                <!-- Register form -->
+                <div class="register form-login mb-3  bg-light p-5" id="register-modal">
+                    <h1 class="text-danger mt-2 text-center">Register</h1>
+                    <p>Username</p>
+                    <input type="username" class="form-control " placeholder="&#xf007;  Username" id="user-res">
+                    <p class="mt-2">Password</p>
+                    <input type="password" class="form-control" placeholder="&#xf023;  Password" id="pass-res">
+                    <p class="mt-2">Retype Password</p>
+                    <input type="password" class="form-control" placeholder="&#xf023;  Password" id="pass-res-2">
+                    <p class="mt-2">Type Account</p>
+                    <select name="" id="select-type-acc" class="p-1">
+                        <option value="user">User</option>
+                        <option value="shipper">Shipper</option>
+                    </select>
                     <p style="color: red;" id="need-input"></p>
-                    <button type="submit" class="btn btn-primary btn-block" id="btn-login" style="background-color: #00ce81; font-size: 18px; ">Login</button>
+                    <button type="submit" class="btn btn-danger btn-block " id="btn-login" style=" font-size: 25px; " onclick="switchModal()">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script src="/LoginPage/script.js"></script>
 
 </html>

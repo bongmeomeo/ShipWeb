@@ -1,6 +1,6 @@
 body {
-    padding: 50px;
-    height: 100%;
+    /* padding: 100px; */
+    height: max-content;
     width: 100%;
     display: flex;
     align-items: center;
@@ -9,6 +9,24 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-family: sans-serif, serif;
+}
+
+body>div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+p,
+h1,
+button {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .img-left {
@@ -22,8 +40,9 @@ body {
     /* right: 400px; */
     height: fit-content;
     width: fit-content;
-    margin-left: -30px;
+    margin-left: -50px;
     /* padding: 7  0px; */
+    filter: drop-shadow(0 0 1.25rem rgb(0, 0, 0));
 }
 
 .form-control {
@@ -31,4 +50,12 @@ body {
     outline: 0;
     background: transparent;
     border-bottom: 1px solid black;
+}
+
+.cursor:hover {
+    cursor: pointer;
+}
+
+.register {
+    display: none;
 }
