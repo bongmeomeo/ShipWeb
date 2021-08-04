@@ -30,6 +30,39 @@ button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
+/* Extra small devices (phones, 600px and down) */
+
+@media only screen and (max-width: 600px) {
+    .form-right {
+        margin-left: 0px;
+    }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (min-width: 600px) {}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 768px) {
+    .form-right {
+        margin-left: -50px;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1200px) {}
+
 .text-form {
     font-size: 40px;
 }
@@ -54,7 +87,11 @@ button {
 .img-left {
     filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
     z-index: -1;
-    border-radius: 2%;
+    /* border-radius: 2%; */
+}
+
+.img-slide {
+    border-radius: 10px;
 }
 
 .img-left:hover {
@@ -72,6 +109,12 @@ button {
     font-weight: bold;
 }
 
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    border-radius: 25px;
+}
+
 .form-control {
     font-family: FontAwesome, Arial;
     font-style: normal
@@ -82,7 +125,7 @@ button {
     /* right: 400px; */
     height: fit-content;
     width: fit-content;
-    margin-left: -50px;
+    /* margin-left: -50px; */
     /* padding: 7  0px; */
     filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
 }
@@ -99,6 +142,10 @@ button {
 }
 
 .register {
+    display: none;
+}
+
+.reset-pass {
     display: none;
 }
 
