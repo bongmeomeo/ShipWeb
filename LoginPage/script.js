@@ -21,7 +21,9 @@ var passReset = document.getElementById('pass-new');
 var rePassReset = document.getElementById('pass-new-2');
 var warningReset = document.getElementById('need-input-reset');
 // Link main page
-var urlPage = "MainPage/MainPage.html"
+var urlUser = "MainPage/MainPage.html";
+var urlShipper = "ShipperPage/ShipPage.html";
+var urlAdmin = "AdminPage/AdminPage.html";
 var account = [{ username: "admin", password: "admin", type: "admin" }];
 // onload html
 function onLoad() {
@@ -60,21 +62,24 @@ function loginCheck() {
     let check = checkAccount(username, password);
     if (username == '' || password == '') {
         warninglog.innerText = "Username and Password must fill!";
-    } else if (username != 'admin' && password != 'admin') {
-        warninglog.innerText = "Username or Password was wrong!";
-    } else if (check == false) {
+    }
+    // else if (username != 'admin' && password != 'admin') {
+    //     warninglog.innerText = "Username or Password was wrong!";
+    // }
+    else if (check[0] == false) {
         warninglog.innerText = "Username not found! Please Register!";
-    } else if (check == true) {
-        loginSucces();
+    } else if (check[0] == true) {
+        loginSucces(check[1]);
     }
 }
 
 function checkAccount(username, password) {
-    let check = false;
+    let check = [false, 'type'];
     checkAcc = JSON.parse(window.localStorage.getItem("account"));
     for (let i = 0; i < checkAcc.length; i++) {
         if (checkAcc[i].username == username && checkAcc[i].password == password) {
-            check = true;
+            check[0] = true;
+            check[1] = checkAcc[i].type;
         }
     }
     return check;
@@ -103,10 +108,20 @@ function changePassword(username, password) {
 }
 
 
-function loginSucces() {
+function loginSucces(type) {
     loader.style.display = 'block';
     setTimeout(function() {
-        window.location.pathname = urlPage;
+        switch (type) {
+            case 'user':
+                window.location.pathname = urlUser;
+                break;
+            case 'shipper':
+                window.location.pathname = urlShipper;
+                break;
+            default:
+                window.location.pathname = urlAdmin;
+                break;
+        }
     }, 2000);
 }
 
