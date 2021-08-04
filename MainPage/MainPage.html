@@ -5,11 +5,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/MainPage/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>MainHome</title>
 </head>
 
 <body>
-    Welcome to Delivery
+    <div class="header container-fluid bg-light p-3">
+        <div class="container ">
+            <div class="row d-flex align-items-center justify-content-around ">
+                <div class="logo col-3 font-weight-bold ">
+                    <h3 id="food">Food Delivery</h3>
+                </div>
+                <div class="infor d-flex">
+                    <div class="icon">
+                        <i class="fa fa-map-marker fa-3x mt-1 mr-2" aria-hidden="true"></i>
+
+                    </div>
+                    <div class="address">
+                        <p>Adress</p>
+                        <p>Adress</p>
+                    </div>
+                </div>
+                <div class="infor d-flex ">
+                    <div class="icon">
+                        <i class="fa fa-phone fa-3x mt-1 mr-2" aria-hidden="true"></i>
+
+                    </div>
+                    <div class="address">
+                        <p>Number</p>
+                        <p>Mon – Sat: 9:00–18:00</p>
+                    </div>
+                </div>
+
+                <div class="social col-3 d-flex justify-content-around">
+                    <i class="fa fa-instagram fa-3x icon-social" aria-hidden="true"></i>
+                    <i class="fa fa-facebook fa-3x icon-social" aria-hidden="true"></i>
+                    <i class="fa fa-twitter fa-3x icon-social" aria-hidden="true"></i>
+                    <i class="fa fa-google-plus fa-3x icon-social" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fuild">
+        <div class="container">
+            <nav class=" row navbar navbar-expand-sm navbar-dark d-flex justify-content-between ">
+                <!-- Brand -->
+
+                <!-- Links -->
+                <ul class="navbar-nav">
+                    <a class="navbar-brand " href="#"><img src="/media/icon/delivery.png" alt="" width="60px" height="40px" class="img-logo"></a>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-nav" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nav" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-nav" href="#">Contact</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-nav" href="#" id="navbardrop" data-toggle="dropdown">
+                          Menu
+                        </a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item " href="#">Pizza</a>
+                            <a class="dropdown-item" href="#">Sushi</a>
+                            <a class="dropdown-item" href="#">Cake</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="nav-right">
+                    <a href="#" style="text-decoration:none;">
+                        <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                    </a>
+                    <h2 class="ml-2" id="num-shop">2</h2>
+                </div>
+
+            </nav>
+
+        </div>
+    </div>
+
 </body>
+<script src="/MainPage/script.js"></script>
 
 </html>

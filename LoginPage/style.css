@@ -30,16 +30,13 @@ button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-
-/* Loader css */
+.text-form {
+    font-size: 40px;
+}
 
 .content-login {
     font-size: 20px;
     color: rgb(71, 71, 71)
-}
-
-.form-control {
-    border-radius: 20%;
 }
 
 .text-info {
@@ -94,13 +91,6 @@ button {
     position: absolute;
 }
 
-.form-control {
-    border: 0;
-    outline: 0;
-    background: transparent;
-    border-bottom: 1px solid black;
-}
-
 
 /* hover */
 
@@ -110,6 +100,18 @@ button {
 
 .register {
     display: none;
+}
+
+#user,
+#pass,
+#user-res,
+#pass-res,
+#pass-res-2 {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #000000;
+    outline: none;
+    box-shadow: none;
 }
 
 

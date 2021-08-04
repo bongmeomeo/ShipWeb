@@ -1,0 +1,65 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p,
+a,
+h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.icon:hover {
+    cursor: pointer;
+    margin-top: -5px;
+}
+
+.icon {
+    color: rgb(153, 133, 133);
+}
+
+.icon-social {
+    color: rgb(153, 133, 133);
+}
+
+.img-logo {
+    color: rgb(0, 0, 0);
+}
+
+.icon-social:hover {
+    margin-top: -5px;
+    color: rgb(248, 68, 68);
+    cursor: pointer;
+}
+
+.navbar {
+    margin-top: -20px;
+    border-radius: 25px;
+    background-color: rgb(201, 80, 0);
+}
+
+.nav-item {
+    margin-left: 20px;
+}
+
+.text-nav {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.fa-shopping-cart {
+    color: black;
+}
+
+.fa-shopping-cart:hover {
+    margin-top: -10px;
+    color: white;
+}
+
+.dropdown-item {
+    font-size: 20px;
+}
+
+.dropdown-item:hover {
+    margin-left: 5px;
+    font-weight: bold;
+}
