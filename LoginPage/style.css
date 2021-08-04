@@ -1,6 +1,6 @@
 body {
     /* padding: 100px; */
-    height: max-content;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -8,6 +8,7 @@ body {
     background-image: url(/media/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: orange;
     font-family: sans-serif, serif;
 }
 
@@ -29,10 +30,26 @@ button {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+
+/* Loader css */
+
+#loader-wrapper {
+    display: none;
+    position: fixed;
+    background-color: #0e0e0e;
+    opacity: 80%;
+    z-index: 1000;
+}
+
 .img-left {
     filter: drop-shadow(0 0 1.25rem rgb(0, 0, 0));
     z-index: -1;
     border-radius: 2%;
+}
+
+.form-control {
+    font-family: FontAwesome, Arial;
+    font-style: normal
 }
 
 .form-right {
@@ -45,12 +62,19 @@ button {
     filter: drop-shadow(0 0 1.25rem rgb(0, 0, 0));
 }
 
+.text-slide {
+    position: absolute;
+}
+
 .form-control {
     border: 0;
     outline: 0;
     background: transparent;
     border-bottom: 1px solid black;
 }
+
+
+/* hover */
 
 .cursor:hover {
     cursor: pointer;
@@ -59,3 +83,6 @@ button {
 .register {
     display: none;
 }
+
+
+/* loader box */
