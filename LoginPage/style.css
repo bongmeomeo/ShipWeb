@@ -33,6 +33,19 @@ button {
 
 /* Loader css */
 
+.content-login {
+    font-size: 20px;
+    color: rgb(71, 71, 71)
+}
+
+.form-control {
+    border-radius: 20%;
+}
+
+.text-info {
+    font-size: 20px;
+}
+
 #loader-wrapper {
     display: none;
     position: fixed;
@@ -42,9 +55,24 @@ button {
 }
 
 .img-left {
-    filter: drop-shadow(0 0 1.25rem rgb(0, 0, 0));
+    filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
     z-index: -1;
     border-radius: 2%;
+}
+
+.img-left:hover {
+    cursor: pointer;
+    width: 120%;
+    height: 120%;
+}
+
+.forgot-pass:hover {
+    color: blue;
+    font-weight: bold;
+}
+
+.text-info:hover {
+    font-weight: bold;
 }
 
 .form-control {
@@ -59,7 +87,7 @@ button {
     width: fit-content;
     margin-left: -50px;
     /* padding: 7  0px; */
-    filter: drop-shadow(0 0 1.25rem rgb(0, 0, 0));
+    filter: drop-shadow(0 0 1rem rgb(0, 0, 0));
 }
 
 .text-slide {

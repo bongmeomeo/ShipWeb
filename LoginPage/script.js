@@ -57,11 +57,10 @@ function checkAccount(username, password) {
 }
 
 function loginSucces() {
-    // loginform.style.display = 'none';
     loader.style.display = 'block';
     setTimeout(function() {
-        window.location.href = urlPage;
-    }, 5000);
+        window.location.pathname = urlPage;
+    }, 2000);
 }
 
 function onSignUp() {
@@ -74,8 +73,13 @@ function onSignUp() {
     } else if (passRes != rePassRes) {
         waringRes.innerText = "Retype Password not same!";
     } else {
+        waringRes.innerText = "Register Success!";
+        waringRes.style.color = "green";
         account.push(userRes, passRes, type);
         window.localStorage.setItem("account", JSON.stringify(account));
-        switchModal();
+        setTimeout(function() {
+            switchModal();
+        }, 2000)
+
     }
 }
