@@ -15,7 +15,7 @@
          "address": "25 Ngô Quyền",
          "date": "8/5/2021",
          "time": "15:30",
-         "price": 100,
+         "price": 200,
          "id": 12,
          "note": "Đến gọi trước",
          "food": [{
@@ -32,7 +32,7 @@
          "address": "73 Lý Tự Trọng",
          "date": "8/5/2021",
          "time": "16:30",
-         "price": 100,
+         "price": 300,
          "id": 13,
          "note": "Thêm 1 đôi đũa",
          "food": [{
@@ -56,7 +56,7 @@
          "address": "73 Lý Tự Trọng",
          "date": "8/5/2021",
          "time": "17:30",
-         "price": 100,
+         "price": 160,
          "id": 14,
          "note": "",
          "food": [{

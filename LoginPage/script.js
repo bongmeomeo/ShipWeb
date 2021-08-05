@@ -147,9 +147,9 @@ function onSignUp() {
         // account.push(userRes, passRes, type);
         account.push({ username: userRes, password: passRes, type: type });
         window.localStorage.setItem("account", JSON.stringify(account));
-        setTimeout(function() {
-            switchModal();
-        }, 2000)
+        // setTimeout(function() {
+        //     switchModal();
+        // }, 2000)
 
     }
 }
@@ -180,9 +180,9 @@ function onResetPass() {
         warningReset.innerText = "Reset Password Success!";
         warningReset.style.color = "green";
         changePassword(usernameReset, passwordReset);
-        setTimeout(function() {
-            switchModal2();
-        }, 2000)
+        // setTimeout(function() {
+        //     switchModal2();
+        // }, 2000)
 
     }
 }

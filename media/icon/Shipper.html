@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://127.0.0.1:5500/ShipperPage/ShipPage.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Shipper_files/style.css">
+    <link rel="stylesheet" href="./Shipper_files/bootstrap.min.css">
+    <script src="./Shipper_files/jquery.min.js.download"></script>
+    <script src="./Shipper_files/popper.min.js.download"></script>
+    <script src="./Shipper_files/bootstrap.min.js.download"></script>
+    <link rel="stylesheet" href="./Shipper_files/font-awesome.min.css">
+    <title>Shipper</title>
+</head>
+
+<body>
+
+    <div class="container-fluid pt-2">
+        <div class="row ">
+            <div class="list-ship col-md-7 col-12 ">
+                <!--  content at top with group button and bell notify -->
+                <div class="content-left d-flex justify-content-between">
+                    <i class="fa fa-bars fa-2x d-md-none d-block " aria-hidden="true"></i>
+                    <div class="btn-group-toggle d-md-block e" role="group" aria-label="Basic example" id="group-btn">
+                        <button type="button" class="btn btn-view" onclick="onClickBtnView(&#39;overview&#39;)">Hôm nay</button>
+                        <button type="button" class="btn btn-view" onclick="onClickBtnView(&#39;history&#39;)">Lịch Sử</button>
+                        <button type="button" class="btn btn-view" onclick="onClickBtnView(&#39;infor&#39;)">Thông Tin</button>
+                        <button type="button" class="btn btn-view" onclick="onClickBtnView(&#39;rate&#39;)">Đánh Giá</button>
+                    </div>
+
+                    <div class="notify">
+                        <i class="fa fa-bell-o fa-2x mt-2" aria-hidden="true" id="icon-notify"></i>
+                        <i class="fa fa-circle" aria-hidden="true" style="color:#df8927; position: absolute;"></i>
+                    </div>
+                </div>
+                <!-- table list of ship today -->
+                <div id="overview" class="view  mt-md-3 mt-0" style="display: block;">
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar view mt-md-3 mt-0" id="tableToday">
+
+                        <table class="table table-bordered table-fixed table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Địa chỉ</th>
+                                    <th scope="col">Ngày đặt</th>
+                                    <th scope="col">Giờ đặt</th>
+                                    <th scope="col">Đơn giá</th>
+                                    <th scope="col">Ghi chú</th>
+                                    <th scope="col">Tình trạng</th>
+                                </tr>
+                            </thead>
+                            <tbody id="body-table-today"><tr id="order11">
+                                                 
+                                                    <th scope="row">1</th>
+                                                    <td>73 Lý Tự Trọng</td>
+                                                    <td>8/5/2021</td>
+                                                    <td>14:30</td>
+                                                    <td>100 VNĐ </td>
+                                                    <td>Kèm nước chấm</td>
+                                                    <td>
+                                                    <div id="status11" class="status-ship">
+                                                    Chưa nhận 
+                                                    </div>
+                                                    </td>
+                                                    <td>
+                                                    <div onclick="changeBgColor(1, status11)" class="view-order-btn text-center">Xem đơn <i class="fa fa-arrow-right" aria-hidden="true"></i> </div>
+                                                    </td>
+                                              
+                                                
+                                        </tr><tr id="order12">
+                                                 
+                                                    <th scope="row">2</th>
+                                                    <td>25 Ngô Quyền</td>
+                                                    <td>8/5/2021</td>
+                                                    <td>15:30</td>
+                                                    <td>200 VNĐ </td>
+                                                    <td>Đến gọi trước</td>
+                                                    <td>
+                                                    <div id="status12" class="status-ship">
+                                                    Chưa nhận 
+                                                    </div>
+                                                    </td>
+                                                    <td>
+                                                    <div onclick="changeBgColor(2, status12)" class="view-order-btn text-center">Xem đơn <i class="fa fa-arrow-right" aria-hidden="true"></i> </div>
+                                                    </td>
+                                              
+                                                
+                                        </tr><tr id="order13">
+                                                 
+                                                    <th scope="row">3</th>
+                                                    <td>73 Lý Tự Trọng</td>
+                                                    <td>8/5/2021</td>
+                                                    <td>16:30</td>
+                                                    <td>300 VNĐ </td>
+                                                    <td>Thêm 1 đôi đũa</td>
+                                                    <td>
+                                                    <div id="status13" class="status-ship">
+                                                    Chưa nhận 
+                                                    </div>
+                                                    </td>
+                                                    <td>
+                                                    <div onclick="changeBgColor(3, status13)" class="view-order-btn text-center">Xem đơn <i class="fa fa-arrow-right" aria-hidden="true"></i> </div>
+                                                    </td>
+                                              
+                                                
+                                        </tr><tr id="order14">
+                                                 
+                                                    <th scope="row">4</th>
+                                                    <td>73 Lý Tự Trọng</td>
+                                                    <td>8/5/2021</td>
+                                                    <td>17:30</td>
+                                                    <td>160 VNĐ </td>
+                                                    <td></td>
+                                                    <td>
+                                                    <div id="status14" class="status-ship">
+                                                    Chưa nhận 
+                                                    </div>
+                                                    </td>
+                                                    <td>
+                                                    <div onclick="changeBgColor(4, status14)" class="view-order-btn text-center">Xem đơn <i class="fa fa-arrow-right" aria-hidden="true"></i> </div>
+                                                    </td>
+                                              
+                                                
+                                        </tr></tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- table list of ship -->
+                <div class="table-wrapper-scroll-y my-custom-scrollbar view mt-md-3 mt-0" id="dashTable" style="display: none;">
+
+                    <table class="table table-bordered table-fixed table-striped mb-0">
+                        <thead>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Địa chỉ</th>
+                                <th scope="col">Ngày đặt</th>
+                                <th scope="col">Giờ đặt</th>
+                                <th scope="col">Đơn giá</th>
+                                <th scope="col">Ghi chú</th>
+                            </tr>
+                        </thead>
+                        <tbody id="body-table">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div id="infor" class="view mt-md-3 mt-0" style="display: none;">
+                    Information
+                </div>
+                <div id="rate" class="view mt-md-3 mt-0" style="display: none;">
+                    Rate
+                </div>
+            </div>
+            <div class="map-ship col-5 h-100">
+                <div class="map">
+
+                </div>
+
+                <div class="order" id="list-order">
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tên món</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Đơn giá</th>
+                                <th scope="col">Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody id="food-order"><tr>
+                 
+                <td>Bún cá</td>
+                <td>2</td>
+                <td>50 VNĐ</td>
+                <td>100 VNĐ</td>
+              
+                    </tr></tbody>
+                    </table>
+                    <p id="food-total">Tổng giá: 100</p>
+                    <div class="confirm-status-div d-flex">
+                        <select name="" id="status-select" class="form-select" style="font-size: 20px;">
+                            <option value="1" class="option-status" style="background-color: #df8927;">Đang giao</option>
+                            <option value="2" class="option-status" style="background-color: rgb(17, 228, 17);">Đã hoàn thành</option>
+                            <option value="3" class="option-status" style="background-color: rgb(253, 62, 62);">Đã huỷ</option>
+                        </select>
+                        <button class="btn btn-view ml-2" id="confirm-status" onclick="onClickConfirm()">Xác nhận</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<script type="text/javascript" src="./Shipper_files/script.js.download"></script>
+
+</body></html>

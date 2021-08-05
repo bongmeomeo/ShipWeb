@@ -139,16 +139,17 @@ function onLoadShipToday() {
                                         `
                 bodyTableToday.appendChild(r);
                 i++;
-                console.log(idstatus + "      idstatus    ")
             })
 
         })
 };
 // show list food order for each ship bill
+var idStatus;
 
 function changeBgColor(num, _idStatus) {
     foodOrder.innerHTML = '';
     var totalPrice = 0;
+    idStatus = _idStatus + "";
     fetch('./listtoday.json')
         .then(function(resp) {
             return resp.json();
@@ -172,22 +173,17 @@ function changeBgColor(num, _idStatus) {
                 <td>${price} VNĐ</td>
               </tr>
                     `
-                let div2 = document.createElement("div");
-                div2.innerHTML = `
-                  
-                    <button class="btn btn-view ml-2" id="confirm-status" onclick="onClickConfirm(${_idStatus})">Xác nhận</button>
-                    `
                 foodOrder.appendChild(div);
-                foodOrder.appendChild(div2);
             })
             document.getElementById('food-total').innerText = "Tổng giá: " + totalPrice;
-            // document.getElementById('confirm-status').onclick = onClickConfirm(_idStatus);
+
         })
 
 };
 
-function onClickConfirm(_idStatus) {
-    let status = document.getElementById(_idStatus);
+function onClickConfirm() {
+    let status = document.getElementById(idStatus);
+    debugger
     switch (valueConfirm.value) {
         case '1':
             status.innerText = "Đang giao";

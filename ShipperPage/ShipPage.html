@@ -88,7 +88,31 @@
                 </div>
 
                 <div class="order" id="list-order">
-                    <p id="food-order"></p>
+
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tên món</th>
+                                <th scope="col">Số lượng</th>
+                                <th scope="col">Đơn giá</th>
+                                <th scope="col">Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody id="food-order">
+
+                        </tbody>
+                    </table>
+                    <p id="food-total"></p>
+
+                    <div class="confirm-status-div d-flex">
+                        <select name="" id="status-select" class="form-select" style="font-size: 20px;">
+                            <option value="1" class="option-status" style="background-color: #df8927;">Đang giao</option>
+                            <option value="2" class="option-status" style="background-color: rgb(17, 228, 17);">Đã hoàn thành</option>
+                            <option value="3" class="option-status" style="background-color: rgb(253, 62, 62);">Đã huỷ</option>
+                        </select>
+                        <!-- <button class="btn btn-view ml-2" id="confirm-status" onclick="onClickConfirm()">Xác nhận</button> -->
+                    </div>
+
                 </div>
             </div>
         </div>
