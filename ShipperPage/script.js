@@ -132,7 +132,7 @@ function onLoadShipToday() {
                                                     </div>
                                                     </td>
                                                     <td>
-                                                    <p onclick="changeBgColor(${i}, ${stt})" class="view-order-btn text-center">Xem đơn <i class="fa fa-arrow-right" aria-hidden="true"></i> </p>
+                                                    <div onclick="changeBgColor(${i}, ${stt})" class="view-order-btn text-center">Xem đơn <i class="fa fa-arrow-right" aria-hidden="true"></i> </div>
                                                     </td>
                                               
                                                 </tr>
