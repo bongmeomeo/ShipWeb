@@ -119,7 +119,7 @@ function onLoadShipToday() {
                 let idstatus = "status" + stt;
 
                 r.innerHTML = `
-                                                 <tr onclick="ChangeBgColor()">
+                                                 <tr >
                                                     <th scope="row">${i}</th>
                                                     <td>${address}</td>
                                                     <td>${date}</td>
@@ -132,7 +132,7 @@ function onLoadShipToday() {
                                                     </div>
                                                     </td>
                                                     <td>
-                                                    <div onclick="changeBgColor(${i}, ${idstatus})" class="view-order-btn text-center">Xem đơn <i class="fa fa-arrow-right" aria-hidden="true"></i> </div>
+                                                    <p onclick="changeBgColor(${i}, ${stt})" class="view-order-btn text-center">Xem đơn <i class="fa fa-arrow-right" aria-hidden="true"></i> </p>
                                                     </td>
                                               
                                                 </tr>
@@ -146,7 +146,8 @@ function onLoadShipToday() {
 };
 // show list food order for each ship bill
 
-function changeBgColor(num, _idStatus) {
+function changeBgColor(num, stt) {
+    document.getElementById('btn-select').innerHTML = '';
     foodOrder.innerHTML = '';
     var totalPrice = 0;
     fetch('./listtoday.json')
@@ -172,22 +173,26 @@ function changeBgColor(num, _idStatus) {
                 <td>${price} VNĐ</td>
               </tr>
                     `
-                let div2 = document.createElement("div");
-                div2.innerHTML = `
-                  
-                    <button class="btn btn-view ml-2" id="confirm-status" onclick="onClickConfirm(${_idStatus})">Xác nhận</button>
-                    `
+
                 foodOrder.appendChild(div);
-                foodOrder.appendChild(div2);
+
             })
-            document.getElementById('food-total').innerText = "Tổng giá: " + totalPrice;
+            let div2 = document.createElement("div");
+            div2.innerHTML = `
+              
+                <button class="btn btn-view ml-2" id="confirm-status" onclick="onClickConfirm(${stt})">Xác nhận</button>
+                `
+            document.getElementById('btn-select').appendChild(div2);
+            document.getElementById('food-total').innerText = "Tổng giá: " + totalPrice + " VNĐ";
             // document.getElementById('confirm-status').onclick = onClickConfirm(_idStatus);
         })
 
 };
+console.log(valueConfirm.value)
 
-function onClickConfirm(_idStatus) {
-    let status = document.getElementById(_idStatus);
+function onClickConfirm(stt) {
+    let status = document.getElementById("status" + stt);
+    console.log(status.innerHTML + "               sdasd")
     switch (valueConfirm.value) {
         case '1':
             status.innerText = "Đang giao";
