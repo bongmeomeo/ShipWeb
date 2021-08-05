@@ -16,29 +16,50 @@
 
 <body>
 
-    <div class="container-fluid p-5">
+    <div class="container-fluid pt-2">
         <div class="row ">
-            <div class="list-ship col-7 ">
+            <div class="list-ship col-md-7 col-12 ">
                 <!--  content at top with group button and bell notify -->
                 <div class="content-left d-flex justify-content-between">
-                    <i class="fa fa-bars fa-2x d-md-none d-block " aria-hidden="true" class="icon-bar" onclick="onClickBar()"></i>
-                    <div class="btn-group-toggle d-md-block d-none" role="group" aria-label="Basic example" id="group-btn">
-                        <button type="button" class="btn btn-view">Tổng Quan</button>
-                        <button type="button" class="btn btn-view" onclick="onLoadShip()">Lịch Sử</button>
-                        <button type="button" class="btn btn-view">Thông Tin</button>
-                        <button type="button" class="btn btn-view">Đánh Giá</button>
+                    <i class="fa fa-bars fa-2x d-md-none d-block " aria-hidden="true" class="icon-bar"></i>
+                    <div class="btn-group-toggle d-md-block e" role="group" aria-label="Basic example" id="group-btn">
+                        <button type="button" class="btn btn-view" onclick="onClickBtnView('overview')">Hôm nay</button>
+                        <button type="button" class="btn btn-view" onclick="onClickBtnView('history')">Lịch Sử</button>
+                        <button type="button" class="btn btn-view" onclick="onClickBtnView('infor')">Thông Tin</button>
+                        <button type="button" class="btn btn-view" onclick="onClickBtnView('rate')">Đánh Giá</button>
                     </div>
 
                     <div class="notify">
-                        <i class="fa fa-bell-o fa-2x mt-2" aria-hidden="true"></i>
+                        <i class="fa fa-bell-o fa-2x mt-2" aria-hidden="true" id="icon-notify"></i>
                         <i class="fa fa-circle" aria-hidden="true" style="color:#df8927; position: absolute;"></i>
                     </div>
                 </div>
+                <!-- table list of ship today -->
+                <div id="overview" class="view  mt-md-3 mt-0">
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar view mt-md-3 mt-0" id="tableToday">
 
+                        <table class="table table-bordered table-fixed table-striped mb-0">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Địa chỉ</th>
+                                    <th scope="col">Ngày đặt</th>
+                                    <th scope="col">Giờ đặt</th>
+                                    <th scope="col">Đơn giá</th>
+                                    <th scope="col">Ghi chú</th>
+                                    <th scope="col">Tình trạng</th>
+                                </tr>
+                            </thead>
+                            <tbody id="body-table-today">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <!-- table list of ship -->
-                <div class="table-wrapper-scroll-y my-custom-scrollbar mt-5" id="dashTable">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar view mt-md-3 mt-0" id="dashTable">
 
-                    <table class="table table-bordered table-striped mb-0">
+                    <table class="table table-bordered table-fixed table-striped mb-0">
                         <thead>
                             <tr>
                                 <th scope="col">STT</th>
@@ -47,24 +68,32 @@
                                 <th scope="col">Giờ đặt</th>
                                 <th scope="col">Đơn giá</th>
                                 <th scope="col">Ghi chú</th>
-                                <th scope="col">Tình trạng</th>
-
                             </tr>
                         </thead>
                         <tbody id="body-table">
 
                         </tbody>
                     </table>
-
+                </div>
+                <div id="infor" class="view mt-md-3 mt-0">
+                    Information
+                </div>
+                <div id="rate" class="view mt-md-3 mt-0">
+                    Rate
                 </div>
             </div>
             <div class="map-ship col-5 h-100">
                 <div class="map">
 
                 </div>
+
+                <div class="order" id="list-order">
+                    <p id="food-order"></p>
+                </div>
             </div>
         </div>
     </div>
+
 
 </body>
 <script type="text/javascript" src="/ShipperPage/script.js"></script>
